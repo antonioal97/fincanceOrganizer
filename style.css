@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap;family=Roboto&display=swap"');
+
 /*GLOBAL ==================*/
 :root {
   --light-blue: #4381bf;
@@ -10,8 +12,8 @@
   --negative-red: #e92929;
   --positive-green: #12a454;
 
-  --font-title: Georgia, "Times New Roman", Times, serif;
-  --font-subtitle: "Courier New", Courier, monospace;
+  --font-title: "Roboto Mono", monospace;
+  --font-subtitle: "Roboto";
 }
 
 *,
@@ -44,7 +46,7 @@ body {
 }
 
 .container {
-  width: min(90vw, 640px);
+  width: min(90vw, 740px);
   margin: auto;
 }
 /*TITLES ==================*/
@@ -209,7 +211,8 @@ table th {
 
 table td {
   background-color: white;
-  font-family: var(--font-title);
+  /* font-family: var(--font-title); */
+  font-family: var(--font-subtitle);
   font-weight: normal;
   padding: 1rem 2rem;
 }
@@ -230,6 +233,13 @@ table tbody tr {
 
 table tbody tr:hover {
   opacity: 1;
+}
+
+/*INDICADOR ==================*/
+
+span.indicator {
+  display: none;
+  visibility: hidden;
 }
 
 /*MODAL ==================*/
@@ -318,8 +328,18 @@ footer {
   }
   #balance {
     display: grid;
-    gap: 2rem;
-    /* grid-template-columns: repeat(2, 1fr) 2fr; */
+    gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(2, 1fr) 2fr; */
+  }
+}
+@media (max-width: 490px) {
+  span.indicator {
+    background: url("./assets/arrow-right.svg") no-repeat;
+    display: block;
+    height: 24px;
+    margin: 1rem auto;
+    visibility: visible;
+    width: 24px;
   }
 }
