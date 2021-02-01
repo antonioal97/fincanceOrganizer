@@ -318,7 +318,9 @@ footer {
   font-size: 12px;
   opacity: 0.6;
   padding: 4rem 0 2rem;
+  position: relative;
   text-align: center;
+  z-index: -1;
 }
 
 /*RESPONSIVE ==================*/
